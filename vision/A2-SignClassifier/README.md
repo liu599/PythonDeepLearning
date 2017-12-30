@@ -1,4 +1,4 @@
-# A1 -LaneLines Detection
+# A2 - Traffic Signs Classifier
 
 Target: detect Lang Lines on the road.
 
@@ -6,6 +6,4 @@ Target: detect Lang Lines on the road.
 
 Install the Jupyter Notebook with python 3.6 or Anaconda.
 
-Open the `LaneLines.ipynb` and see the output.
-
-The example images and output video can be found in the test output folders.
+Open the `Traffic_Sign_Classifier.ipynb` and see the output.
