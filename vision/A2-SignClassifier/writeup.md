@@ -102,7 +102,7 @@ If an iterative approach was chosen:
     - It shows a better accuracy when I increase epochs (1, 10, 40)
     - Learning rate performances best at 0.001, but not good for 0.0001.
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-    - Convolution layer is used for this kind of problem. It is more clever than the normal neural network. They have several different filters/kernels consisting of (randomly initialized) trainable parameters depending on the depth and filters at each layer of a network, which can convolve on a given input volume (the first input being the image itself) spatially to create some feature/activation maps at each layer.
+    - Convolution layers are used for this kind of problem. They are more clever than the normal neural network. They have several different filters/kernels consisting of (randomly initialized) trainable parameters depending on the depth and filters at each layer of a network, which can convolve on a given input volume (the first input being the image itself) spatially to create some feature/activation maps at each layer.
 
 If a well known architecture was chosen:
 * What architecture was chosen?
