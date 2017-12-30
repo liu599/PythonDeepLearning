@@ -77,9 +77,7 @@ My final model consisted of the following layers:
 | RELU					|												|
 | Fully connected		| input 84, output 43                           |
 | Softmax				|												|
-|       				|												|
-|       				|												|
-|       				|												|
+
 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
@@ -112,7 +110,7 @@ If a well known architecture was chosen:
 * Why did you believe it would be relevant to the traffic sign application?
     - This problem is an image recognition problem, LeNet is a CNN model which is good for this kind of problem.
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-    - 
+    - my final model shows training set accuracy of 0.995, validation set accuracy of 0.927, test set accuracy of 0.912
  
 
 ### Test a Model on New Images
