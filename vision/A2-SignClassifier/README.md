@@ -1,6 +1,6 @@
 # A2 - Traffic Signs Classifier
 
-Target: detect Lang Lines on the road.
+Target: Traffic Signs Classifier.
 
 ## Run the program
 
