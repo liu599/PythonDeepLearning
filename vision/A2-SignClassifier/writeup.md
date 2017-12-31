@@ -82,14 +82,14 @@ My final model consisted of the following layers:
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an 40 epochs, batch size as 128, learning rate as 0.001.
+To train the model, I used an 60 epochs, batch size as 128, learning rate as 0.001.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of 0.995
-* validation set accuracy of 0.927
-* test set accuracy of 0.912
+* training set accuracy of 0.996
+* validation set accuracy of 0.936
+* test set accuracy of 0.926
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
@@ -110,7 +110,7 @@ If a well known architecture was chosen:
 * Why did you believe it would be relevant to the traffic sign application?
     - This problem is an image recognition problem, LeNet is a CNN model which is good for this kind of problem.
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-    - my final model shows training set accuracy of 0.995, validation set accuracy of 0.927, test set accuracy of 0.912
+    - my final model shows training set accuracy of 0.996, validation set accuracy of 0.936, test set accuracy of 0.926
  
 
 ### Test a Model on New Images
@@ -125,6 +125,8 @@ Here are five German traffic signs that I found on the web:
 ![alt text](./images/12.png) 
 ![alt text](./images/13.png)
 
+Going for each of the pictures, the last two signs, yield signs and priority road are easy to classify because the shape of these two signs are special and relatively unique. The round speed limit and keep right signs are very difficult to classify because there are a lot of signs in the same shape and they all look similar (The area of difference for these signs are relatively small).
+
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
@@ -132,23 +134,21 @@ Here are the results of the prediction:
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | keep Right      		| Road work   									| 
-| thirty Limit     		| Keep right 									|
+| Speed limit (30km/h)  | Speed limit (50km/h)                          |
 | double Curve			| Dangerous curve to the right					|
 | priority road	      	| Priority road					 				|
 | yield sign			| Yield              							|
 
 
-The model was able to correctly guess 2 of the 5 traffic signs, which gives an accuracy of 40%. This compares not good to the accuracy on the test set of 91%
+The model was able to correctly guess 2 of the 5 traffic signs, which gives an accuracy of 40%. This compares not good to the accuracy on the test set of 93%. The model is hard to classify the speed limit sign like we discussed above. 
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
-
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0         			| Road work   									| 
 | 1.0     				| Yield 										|
-| 1.0					| Road work										|
+| 0.997, 0.002			| Children crossing, Dangerous curve to the right |
 | 1.0	      			| Priority road					 				|
 | 1.0				    | Yield      							        |
 
