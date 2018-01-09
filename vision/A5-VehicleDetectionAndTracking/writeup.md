@@ -230,5 +230,5 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-I tried to use a different block_norm for hog function but failed. It results too many false captures. I think I can add more complicated threshold condition to make it more robust.
+I tried to use a different block_norm for hog function but failed. I get too many false captures. I think I can add more complicated threshold condition to make it more robust.
 
