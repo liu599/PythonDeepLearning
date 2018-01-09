@@ -18,10 +18,14 @@ The goals / steps of this project are the following:
 [image1]: ./examples/car_not_car.png
 [image2]: ./examples/HOG_example.png
 [image3]: ./examples/sliding_windows.png
-[image4]: ./examples/sliding_window.png
+[image4]: ./examples/sliding_window_2.png
 [image5]: ./examples/bboxes_and_heat.png
-[image6]: ./examples/labels_map.png
-[image7]: ./examples/output_bboxes.png
+[image6]: ./examples/c1.png
+[image7]: ./examples/c2.png
+[image8]: ./examples/c3.png
+[image9]: ./examples/c4.png
+[image10]: ./examples/c5.png
+[image11]: ./examples/c6.png
 [video1]: ./project_video.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
@@ -109,12 +113,13 @@ def apply_threshold(heatmap, threshold):
 
 
 ![alt text][image3]
+![alt text][image4]
 
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
 Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
 
-![alt text][image4]
+![alt text][image5]
 ---
 
 ### Video Implementation
@@ -129,10 +134,12 @@ I recorded the positions of positive detections in each frame of the video.  Fro
 
 Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
 
-```python
-    
-```
-
+![alt text][image6]
+![alt text][image7]
+![alt text][image8]
+![alt text][image9]
+![alt text][image10]
+![alt text][image11]
 
 
 ### Here are six frames and their corresponding heatmaps:
