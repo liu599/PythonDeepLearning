@@ -25,6 +25,8 @@ The goals / steps of this project are the following:
 [image4]: ./examples/warped_straight_lines.png "Warp Example"
 [image5]: ./examples/color_fit_lines.png "Fit Visual"
 [image6]: ./examples/example_output.png "Output"
+[image7]: ./examples/failure.png "Output"
+[image8]: ./examples/failure2.png "Output"
 [video1]: ./project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
@@ -135,4 +137,14 @@ Here's a [link to my video result](./project_video.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Some part of the line away from the line a bit, more sanity checks may improve the results.
+Samples of bad performance:
+
+![alt text][image7]
+![alt text][image8]
+
+There is a short period failure happened in the video. This may be due to a bad curvature update method. I think the program did not make a right judge(Sanity Check) on the center of lane. Possible functionality improvement is needed here.
+
+  
+
+
+
