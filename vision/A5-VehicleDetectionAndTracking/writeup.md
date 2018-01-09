@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 [image1]: ./examples/car_not_car.png
 [image2]: ./examples/HOG_example.png
 [image3]: ./examples/sliding_windows.png
-[image4]: ./examples/sliding_window_2.png
+[image4]: ./examples/sliding_windows_2.png
 [image5]: ./examples/bboxes_and_heat.png
 [image6]: ./examples/c1.png
 [image7]: ./examples/c2.png
@@ -84,7 +84,7 @@ Here is the chosen HOG parameters
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
-I trained a linear SVM using 8792 cars and non cars pictures. Firstly the pictures are applied with feature extraction techniques. I use train_test_split function to split the dataset into train and test data.
+I trained a linear SVM using 8792 cars and non cars pictures.  The pictures are applied with feature extraction techniques. A train_test_split function is used to split the dataset into train and test data.
 
 Classifier accuracy shows that this model has the accuracy:
 
