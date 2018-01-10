@@ -38,7 +38,7 @@ My project includes the following files:
 * model.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
 * model.h5 containing a trained convolution neural network 
-* writeup_report.md or writeup_report.pdf summarizing the results
+* writeup.md or writeup_report.pdf summarizing the results
 
 #### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
@@ -67,7 +67,7 @@ The model.py file contains the code for training and saving the convolution neur
     model.add(Dense(10))
     model.add(Dense(1))
 ```
-The model has five convolutional layers and three fully connected map.
+The model has five convolution layers and three fully connected map.
 
 #### 2. Attempts to reduce overfitting in the model
 

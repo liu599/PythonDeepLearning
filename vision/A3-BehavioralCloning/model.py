@@ -41,6 +41,7 @@ print ("measurement in array", measurements[66])
 """
 #Augment the number of images by getting a flip of each image
 augmented_images, augmented_measurements = [], []
+
 for image, measurement in zip(images, measurements):
     augmented_images.append(image)
     augmented_measurements.append(measurement)
