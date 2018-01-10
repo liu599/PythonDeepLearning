@@ -22,7 +22,7 @@ The goals / steps of this project are the following:
 [image2]: ./examples/left.jpg "Grayscaling"
 [image3]: ./examples/center.jpg "Recovery Image"
 [image4]: ./examples/right.jpg "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
+[image5]: ./examples/error.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
 [image7]: ./examples/placeholder_small.png "Flipped Image"
 
@@ -97,10 +97,14 @@ To capture good driving behavior, I first recorded two laps on track one using c
 ![alt text][image3]
 ![alt text][image4]
 
-To augment the data sat, I also flipped images and angles. But with the augment the model is not easy to work well, so I turned back to the original model. 
+To augment the data sat, I also flipped images and angles. But with the augment pictures the model is not working well, so I turned back to the original model. 
 
 After the collection process, I had 13914 number of samples. I then preprocessed this data.
 
 I finally randomly shuffled the data set and put 2783 samples(20%) into a validation set. 
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 7, after this the validation error will raise. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+
+![alt text][image5]
+
+

@@ -26,7 +26,7 @@ for line in lines:
 
     image = cv2.imread(current_path)
     images.append(image)
-    images.append(cv2.flip(image, 1))
+    # images.append(cv2.flip(image, 1))
     images.append(cv2.imread(line[1]))
     images.append(cv2.imread(line[2]))
 
@@ -41,7 +41,7 @@ for line in lines:
 
 
     measurements.append(measurement)
-    measurements.append(-1*measurement)
+    # measurements.append(-1*measurement)
     measurements.append(measurement+0.25)
     measurements.append(measurement-0.25)
 
