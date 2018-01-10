@@ -26,7 +26,7 @@ for line in lines:
 
     image = cv2.imread(current_path)
     images.append(image)
-    # images.append(cv2.flip(image, 1))
+    images.append(cv2.flip(image, 1))
     images.append(cv2.imread(line[1]))
     images.append(cv2.imread(line[2]))
 
@@ -41,9 +41,9 @@ for line in lines:
 
 
     measurements.append(measurement)
-    # measurements.append(-1*measurement)
-    measurements.append(measurement+0.275)
-    measurements.append(measurement-0.275)
+    measurements.append(-1*measurement)
+    measurements.append(measurement+0.25)
+    measurements.append(measurement-0.25)
 
 
 X_train = np.array(images)
@@ -78,7 +78,6 @@ model.add(Convolution2D(64, 3, 3, activation='relu'))
 model.add(Flatten())
 model.add(Dense(100))
 model.add(Dense(50))
-model.add(Dropout(0.5))
 model.add(Dense(10))
 model.add(Dense(1))
 
@@ -86,7 +85,7 @@ model.add(Dense(1))
 
 model.compile(loss='mse', optimizer='adam')
 
-history_object=model.fit(X_train, y_train, validation_split=0.2, shuffle=True, nb_epoch=10)
+history_object=model.fit(X_train, y_train, validation_split=0.2, shuffle=True, nb_epoch=16)
 
 model.save('model.h5')
 

@@ -62,19 +62,14 @@ I chose Nvidia Architecture. It has **1 normalization layer**, **5 convolutional
     model.add(Convolution2D(48, 5, 5, subsample=(2,2), activation='relu'))
     model.add(Convolution2D(64, 3, 3, activation='relu'))
     model.add(Convolution2D(64, 3, 3, activation='relu'))
-    model.add(Dropout(0.5))
     model.add(Flatten())
     model.add(Dense(100))
-    model.add(Dropout(0.5))
     model.add(Dense(50))
-    model.add(Dropout(0.5))
     model.add(Dense(10))
     model.add(Dense(1))
 ```
 
 #### 2. Attempts to reduce overfitting in the model
-
-The model contains **three** dropout layers in order to reduce overfitting. 
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
@@ -102,16 +97,7 @@ To capture good driving behavior, I first recorded two laps on track one using c
 ![alt text][image3]
 ![alt text][image4]
 
-To augment the data sat, I also flipped images and angles. Even without the augment the model can recover the driving. 
-
-```python
-    for image, measurement in zip(images, measurements):
-        augmented_images.append(image)
-        augmented_measurements.append(measurement)
-        # augment
-        augmented_images.append(cv2.flip(image, 1))
-        augmented_measurements.append(-1*measurement)
-```
+To augment the data sat, I also flipped images and angles. But with the augment the model is not easy to work well, so I turned back to the original model. 
 
 After the collection process, I had 13914 number of samples. I then preprocessed this data.
 
